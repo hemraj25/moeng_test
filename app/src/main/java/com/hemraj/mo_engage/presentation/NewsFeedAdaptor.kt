@@ -57,6 +57,7 @@ class NewsFeedAdaptor(private val onItemClickListener: (NewsFeed?) -> Unit) :
         fun bindData(newsFeed: NewsFeed?) {
             Picasso.get()
                 .load(newsFeed?.imageUrl)
+                .fit()
                 .placeholder(
                     ContextCompat.getDrawable(
                         itemView.context,
